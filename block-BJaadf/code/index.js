@@ -32,6 +32,7 @@ console.log(fruits);
 
 fruits.unshift("Guava");
 console.log(fruits);
+
 // Add a new element to the start ('Dragon Fruit') and shift the index of all other to one higher value
 
 fruits.unshift("Dragon Fruit");
@@ -67,13 +68,15 @@ fruits = fruits.concat(moreFruits);
 
 // Log the name of all fruit in console
 
-console.log(fruits);
+fruits.forEach((fruit) => console.log(fruit));
 
 // Convert each fruit name to lowercase and log it
 
-console.log(fruits.map(element => {
-    return element.toLowerCase(element);
-}));
+// console.log(fruits.map(element => {
+//     return element.toLowerCase(element);
+// }));
+
+fruits.forEach((fruit) => console.log(fruit.toLowerCase()));
 
 
 // Convert all fruits name into lowercase and store in new array named lowercaseFruits
@@ -98,7 +101,7 @@ let numbersThree = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
 
 // Convert the numbers array to one level element. Remove sub-arrays to individual elements and log them
 
-let flatArray = numbers.flat();
+let flatArray = numbers.flat(2);
 console.log(flatArray);
 
 // Convert the numbersTwo array to one level element. Remove all sub-arrays to individual elements and log them.
@@ -110,7 +113,7 @@ console.log(newArr);
 // Convert the numbersThree array to one level element.
 // Remove all sub-arrays to individual elements, log them and update the value of numbersThree to the new flat array.
 
-numbersThree = numbersThree.flat(5);
+numbersThree = numbersThree.flat(Infinity);
 console.log(numbersThree);
 
 // Use forEach to log all the elements of numberThree array
@@ -162,10 +165,15 @@ function reducer(a, b) {
 }
 console.log(fruits.reduce(reducer));
 
+console.log(fruits.join("-").toUpperCase());
+
 // Join all fruits with '&', convert to lowercase and log it
 
 function converter(a, b) {
-    let result =  `${a} & ${b}`;
+    let result =  `${a}&${b}`;
     return result.toUpperCase();
 }
 console.log(fruits.reduce(converter));
+
+
+console.log(fruits.join("&").toLowerCase());
