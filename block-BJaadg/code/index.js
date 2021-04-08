@@ -13,7 +13,7 @@ console.log(indexOfIs);
 2. Find the character at the index indexOfIs (Problem 1) in quote.
 */
 
-quote.charAt(6); 
+console.log(quote.charAt(indexOfIs));
 
 /*
 3. Log the message saying `The index of first is in quote is 7`
@@ -32,13 +32,17 @@ console.log(`The index of first is in quote is ${quote.indexOf("is")}`);
   */
   
   let arr = quote.substring(0, 6).split("");
-  // let result = "";
-  // arr.forEach((element, index) => result = result + (`The character at index ${index} is '${element}' \n`));
+//   let result = "";
+//    arr.forEach((element, index) => result = result + (`The character at index ${index} is '${element}' \n`));
   
 const result = arr.reduce((result, element, index) => {
    return result += `The character at index ${index} is '${element}' \n`   
 }, "");  
 console.log(result);
+
+for (let i = 0; i < 6; i++) {
+  console.log(`The character at index ${i} is "${quote[i]}"`);
+}
 
 /*
 5. Using the variable from , to and quote variable dispaly this message
@@ -77,35 +81,45 @@ console.log(quote.indexOf("we"));
 /*
 10. Split the quote into individual word and store it in a variable name quoteSplitted
 */
-let quoteSplitted = "" ;
-quoteSplitted = String(quote.split(" "));
+
+let quoteSplitted = quote.split(" ");
 console.log(quoteSplitted);
 
 /*
 11. Change the word "today" in quoteSplitted to "tomorrow" and join all the words to form a sentance.
 */
 
-let quoteReplaced =  quoteSplitted.replace("today", "tommorow");
-console.log(quoteReplaced);
+// let quoteReplaced =  quoteSplitted.replace("today", "tommorow");
+// console.log(quoteReplaced);
+
+let index = quoteSplitted.indexOf("today");
+
+quoteSplitted[index] = "tommorow"; 
+
+quoteSplitted.join(' ');
+
+console.log(quoteSplitted);
 
 /*
 12. Find the index of second "o" in quote. Use indexOf
 */
 
-console.log(quote.indexOf("o"));
+console.log(quote.indexOf("o", 8));
 
 /*
 13. Find the last index of letter "a" in quote.
 */
 
-console.log(quote.lastIndexOf("a"));
+let lastIndexOfA = quote.lastIndexOf("a");
 
 
 /*
 14. Find the second last index of letter "a" in quote.
 */
-// console.log(quote.lastIndexOf("a", quote));
-let count = 0;
+ console.log(quote.lastIndexOf("a", lastIndexOfA - 1));
+
+
+ let count = 0;
 for (let i = quote.length - 1; i >= 0; i--) {
    if (quote[i] === "a") {
      count += 1;
@@ -157,7 +171,7 @@ console.log(replacedHouse);
 20. Make the quote of length 30 and put ... at the end. (use slice)
 */
 
-console.log(quote.slice(0, quote.length - 30).padEnd(3, "."));
+console.log(quote.slice(0, 30) +  "...");
 
 /*
 21. Find out does quote, from, to starts with "A"
