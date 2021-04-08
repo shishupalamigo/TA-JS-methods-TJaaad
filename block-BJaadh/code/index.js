@@ -40,11 +40,11 @@ console.log(strings);
 
 // - Find all the words that contain 'is' use string method 'includes'
 
-for (let words of strings) {
- if (words.includes("is") == true) {
-  console.log(words);
- }   
-}
+// for (let words of strings) {
+//  if (words.includes("is") == true) {
+//   console.log(words);
+//  }   
+// }
 
 let wordsHavingIs = strings.filter(item => item.includes("is"));
 console.log(wordsHavingIs);
@@ -77,14 +77,14 @@ strings.pop();
 
 // - Find largest number in numbers
 
-let largestNum = numbers.sort((a, b) => a - b).pop();
+let largestNum = [...numbers].sort((a, b) => a - b).pop();
 console.log(largestNum);
 
 // - Find longest string in strings
 
-let longestString = strings.sort((a, b) => a.length - b.length).pop();
+let longestString = [...strings].sort((a, b) => a.length - b.length).pop();
 console.log(longestString);
-
+ 
 // - Find all the even numbers
 
 let evenNum = numbers.filter((num) => {
@@ -109,7 +109,7 @@ console.log(numbers.slice(3, 7));
 
 // - Make a subset of strings array ['a','collection']
 
-console.log(strings.slice(2, 5));
+console.log(strings.slice(3, 5));
 
 // - Replace 12 & 18 with 1221 and 1881
 
@@ -124,7 +124,10 @@ final = numbers.map((num) => {
 });
 console.log(final);
 
+// numbers.splice(numbers.indexOf(12), 1, 1221);
+// numbers.splice(numbers.indexOf(18), 1, 1881);
 
+// console.log(numbers);
 
 // - Replace words in strings array with the length of the word
 
