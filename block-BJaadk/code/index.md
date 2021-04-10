@@ -10,7 +10,7 @@ function double(num) {
 }
 let doubleNum = numbers.forEach(double);
 ```
-![](./img/main.png)
+![Question 1 Arrey method visualisation](./img/Q1.jpg)
 
 
 ```js
@@ -20,6 +20,7 @@ function double(num) {
 }
 let doubleNum = numbers.forEach(double);
 ```
+![Question 2 Arrey method visualisation](./img/Q2.jpg)
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -28,6 +29,7 @@ function double(num) {
 }
 let doubleNum = numbers.forEach(double);
 ```
+![Question 3 Arrey method visualisation](./img/Q3-4.jpg)
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -36,6 +38,8 @@ function double(num) {
 }
 let doubleNumbers = numbers.map(double);
 ```
+![Question 4 Arrey method visualisation](./img/Q3-4.jpg)
+
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -44,6 +48,8 @@ function addTwo(num) {
 }
 let doubleNumbers = numbers.map(addTwo);
 ```
+![Question 5 Arrey method visualisation](./img/Q5-6.jpg)
+
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -52,6 +58,8 @@ function addTwo(num) {
 }
 let doubleNumbers = numbers.map(addTwo);
 ```
+![Question 6 Arrey method visualisation](./img/Q5-6.jpg)
+
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -61,6 +69,9 @@ function addTwo(num) {
 let doubleNumbers = numbers.map(addTwo);
 ```
 
+![Question 7 Arrey method visualisation](./img/Q7-8.jpg)
+
+
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function isOdd(num) {
@@ -68,6 +79,9 @@ function isOdd(num) {
 }
 let oddNumbers = numbers.filter(isOdd);
 ```
+
+![Question 8 Arrey method visualisation](./img/Q7-8.jpg)
+
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -77,6 +91,9 @@ function test(num) {
 let filteredNumbers = numbers.filter(test);
 ```
 
+![Question 9 Arrey method visualisation](./img/Q9-10-11.jpg)
+
+
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function test(num) {
@@ -84,6 +101,9 @@ function test(num) {
 }
 let filteredNumbers = numbers.filter(test);
 ```
+
+![Question 10 Arrey method visualisation](./img/Q9-10-11.jpg)
+
 
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
@@ -93,6 +113,9 @@ function add(accumulator, currentValue) {
 let sum = numbers.reduce(add);
 ```
 
+![Question 11 Arrey method visualisation](./img/Q9-10-11.jpg)
+
+
 ```js
 let numbers = [100, 200, 33, 45, 65, 76, 51];
 function add(accumulator, currentValue) {
@@ -100,3 +123,5 @@ function add(accumulator, currentValue) {
 }
 let sum = numbers.reduce(add);
 ```
+
+![Question 12 Arrey method visualisation](./img/Q9-10-11.jpg)
