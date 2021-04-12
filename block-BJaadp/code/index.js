@@ -17,12 +17,15 @@ let persons = [
 
 // Find the average grade
 
-let totalGrades = persons
-    .map(person => person.grade)
-    .reduce((acc, cv) => {
-      acc += cv;
-      return acc;
-    }, 0) 
+// let totalGrades = persons
+//     .map(person => person.grade)
+//     .reduce((acc, cv) => {
+//       acc += cv;
+//       return acc;
+//     }, 0) 
+let totalGrades = persons.reduce((acc, cv) => {
+  return acc + cv.grade; 
+}, 0);
 let avgGrade = totalGrades / persons.length;
 
 console.log(avgGrade);
@@ -164,8 +167,8 @@ const dataTwo = [
 // Using reduce flat dataTwo array
 
 let flatArrTwo = dataTwo.reduce((acc, cv) => {
-  acc = acc.concat(cv); 
-   return acc.flat();
+  acc = acc.concat(cv.flat(Infinity)); 
+   return acc;
  } ,[])
  console.log(flatArrTwo);
 
@@ -222,14 +225,21 @@ EXAMPLE:
   ...
 */
 
-let incrementValue = pipeline[0](3);
-console.log(incrementValue);
+// let incrementValue = pipeline[0](3);
+// console.log(incrementValue);
 
-let doubleValue = pipeline[1](incrementValue);
-console.log(doubleValue);
+// let doubleValue = pipeline[1](incrementValue);
+// console.log(doubleValue);
 
-let decrementValue = pipeline[2](doubleValue);
-console.log(decrementValue);
+// let decrementValue = pipeline[2](doubleValue);
+// console.log(decrementValue);
+
+let value = pipeline.reduce((acc, cv) => {
+  acc = cv(acc);
+  return acc;
+}, 3)
+
+console.log(value);
 
 let pipeline2 = [
   increment,
