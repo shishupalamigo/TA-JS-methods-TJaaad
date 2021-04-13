@@ -2,20 +2,30 @@
 
 function countAllPeople() {
   // your code goes here
-  let count = 0;
-for (let house of got.houses) {
-  count += house.people.length;
-}
-return count;
+//   let count = 0;
+// for (let house of got.houses) {
+//   count += house.people.length;
+// }
+// return count;
+let totalPeople = 0;
+  got.houses.forEach((house) => {
+      totalPeople += house.people.length; 
+    }
+  ); 
+  return totalPeople
 }
 
 
 function peopleByHouses() {
   // your code goes here
 let obj = {};
-  for (let house of got.houses) {
+  // for (let house of got.houses) {
+  //   obj[house.name] = house.people.length;
+  // }
+  got.houses.forEach(house => {
     obj[house.name] = house.people.length;
-  }
+  });
+
  return obj;
 }
 
@@ -23,14 +33,20 @@ let obj = {};
 function everyone() {
   // your code goes here
 let arr = [];
-for (let house of got.houses) {
-  house.people.forEach(element => arr.push(element.name)); 
-}
+// for (let house of got.houses) {
+//   house.people.forEach(element => arr.push(element.name)); 
+// }
+    got.houses.forEach(house => {
+      let peopleName = house.people.map(
+        person => person.name
+        );
+        arr = arr.concat(peopleName);
+    });
 return arr;
 }
 
 function nameWithS() {
-  // your code goes here
+  //your code goes here
   let arr = [];
   for (let house of got.houses) {
     house.people.forEach(element => {
@@ -39,9 +55,11 @@ function nameWithS() {
     });
   }
   return arr;
+  // let allPeople = everyone();
+  //   return allPeople.filter((name) => {
+  //     name.toLowerCase().includes("s");
+  //   });
   }
-
-
 
 function nameWithA() {
   // your code goes here
